@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -15,7 +14,6 @@ body {
 
 body {
   font-family: "Raleway", sans-serif;
-  /*font-size: 1rem;*/
 }
 
 .container {
@@ -43,7 +41,7 @@ header #header_menu ul {
   justify-content: flex-end;
 }
 header #header_menu ul li + li {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 header.scrolled {
   height: 60px;
@@ -81,7 +79,7 @@ header.scrolled {
 
 .fresh_section {
   background: url("../images/background_fresh.png") center center/cover no-repeat;
-  height: 103vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -91,11 +89,12 @@ header.scrolled {
 .fresh_section .content_fresh h1 {
   color: #000;
   font-size: 3.875rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 100px;
 }
 .fresh_section .content_fresh p {
   line-height: 30px;
+  font-size: 1.125rem;
 }
 
 .btn_orange {
@@ -110,6 +109,7 @@ header.scrolled {
   font-size: 20px;
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
+  cursor: pointer;
   margin-top: 18px;
 }
 .btn_orange:hover {
@@ -143,71 +143,67 @@ header.scrolled {
   line-height: 30px;
 }
 
-.background-servises {
+.section_services {
   background-color: #70bfff;
 }
-
-.section_services {
-  padding: 7vh 0;
+.section_services .block_servises {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: url(../images/Tomato.png) right center no-repeat;
+  padding: 15% 0 15% 10%;
 }
-.section_services .block_link {
+.section_services .block_servises .block_link {
   list-style: none;
-  padding-top: 65px;
-  /*margin-right: 200px;*/
-}
-.section_services .block_link li {
-  background-color: white;
-  margin: 15px 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 403px;
-  height: 103px;
-  text-align: center;
-  box-shadow: 0 0 5px black;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 490px;
+  width: 37%;
 }
-.section_services .block_link li a {
+.section_services .block_servises .block_link li {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 0 5px black;
+  height: calc(25% - 20px);
+}
+.section_services .block_servises .block_link li a {
   text-decoration: none;
-  padding: 35px 0px;
-  font-weight: 700;
-  font-size: 1.25rem;
   width: 75%;
-  border-right: 2px solid #9d9d9d;
+  text-align: center;
+  font-size: 1.375rem;
+  line-height: 28px;
+  font-weight: 700;
   color: #000;
 }
-.section_services .block_link li img {
-  width: 55px;
-  height: 55px;
-  position: relative;
-  top: 25px;
-  right: 25px;
+.section_services .block_servises .block_link li .image_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 125%;
+  border-left: 1px solid #9d9d9d;
 }
-.section_services .block_link li:hover {
+.section_services .block_servises .block_link li:hover {
   transform: scale(1.05);
 }
-.section_services .block_image {
-  position: relative;
-  width: 600px;
-  z-index: 0;
+.section_services .block_servises .block_image {
+  width: 54%;
 }
-.section_services .block_image h2 {
-  position: absolute;
-  top: 200px;
+.section_services .block_servises .block_image h2 {
   color: #fff;
   font-size: 5.625rem;
   text-align: center;
   font-weight: 700;
-  font-weight: 700;
-  font-size: 90px;
-  margin-left: -70px;
-  z-index: 0;
+  letter-spacing: 3px;
 }
 
 .section_gallery {
   background-color: #ffe92f;
-  padding: 10vh 0;
+  padding: 100px 0;
   text-align: center;
 }
 .section_gallery h2 {
@@ -264,15 +260,15 @@ header.scrolled {
   font-size: 20px;
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
-  margin-top: 50px;
   cursor: pointer;
+  margin-top: 50px;
 }
 .section_gallery .btn_orange:hover {
   background-color: #324e5f;
 }
 
 .section_subscribe {
-  padding: 10vh 0;
+  padding: 150px 0;
   background: url(../images/background_sub.png) center center no-repeat;
 }
 
@@ -339,8 +335,8 @@ header.scrolled {
   font-size: 20px;
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
-  width: 170px;
   cursor: pointer;
+  width: 170px;
 }
 .btn_subscribe .btn_green:hover {
   background-color: #536718;
@@ -463,8 +459,8 @@ header.scrolled {
   font-size: 20px;
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
-  margin-bottom: 100px;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 .btn_red:hover {
   background-color: #b50715;
@@ -516,10 +512,8 @@ header.scrolled {
 
 .form {
   background-color: rgba(0, 177, 177, 0.4);
-  /*делаем прозрачность и цвет для поля ввода*/
   border: none;
   outline: none;
-  /*убирает черную рамку при клике на поле ввода*/
   width: 500px;
   height: 50px;
   color: #fff;
@@ -578,8 +572,8 @@ header.scrolled {
   font-size: 20px;
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
-  margin-bottom: 50px;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 .btn_blue:hover {
   background-color: #324e5f;

@@ -10,6 +10,7 @@
     font-size: 20px;
     font-weight: 200;
     box-shadow: 0px 1px 4px #1d1d1d;
+    cursor: pointer;
 }
 
 @mixin h2($color) {
@@ -58,7 +59,6 @@ body {
 
 body {
     font-family: 'Raleway', sans-serif;
-    /*font-size: 1rem;*/
 }
 
 .container {
@@ -89,7 +89,7 @@ header {
 
             li {
                 +li {
-                    margin-left: 10px;
+                    margin-left: 15px;
                 }
             }
         }
@@ -135,7 +135,7 @@ header {
 
 .fresh_section {
     background: url('../images/background_fresh.png') center center/cover no-repeat;
-    height: 103vh;
+    height: 100vh;
     display: flex;
     align-items: center;
 
@@ -145,12 +145,13 @@ header {
         h1 {
             color: $color_black;
             @include fz(62);
-            font-weight: 800;
+            font-weight: 900;
             line-height: 100px;
         }
 
         p {
             line-height: 30px;
+            @include fz(18)
         }
     }
 }
@@ -190,75 +191,74 @@ header {
     }
 }
 
-.background-servises {
-    background-color: $color_lightblue;
-}
+
 
 .section_services {
-    padding: 7vh 0;
-    display: flex;
-    justify-content: space-between;
+    background-color: $color_lightblue;
 
-    .block_link {
-        list-style: none;
-        padding-top: 65px;
-        /*margin-right: 200px;*/
+    .block_servises {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url(../images/Tomato.png) right center no-repeat;
+        padding: 15% 0 15% 10%;
 
-        li {
-            background-color: white;
-            margin: 15px 0;
+        .block_link {
+            list-style: none;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 403px;
-            height: 103px;
-            text-align: center;
-            box-shadow: 0 0 5px rgb(0, 0, 0);
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 490px;
+            width: 37%;
 
-            a {
-                text-decoration: none;
-                padding: 35px 0px;
-                font-weight: 700;
-                @include fz(20);
-                width: 75%;
-                border-right: 2px solid #9d9d9d;
-                color: $color_black;
+            li {
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0;
+                box-shadow: 0 0 5px rgb(0, 0, 0);
+                height: calc(25% - 20px);
+
+                a {
+                    text-decoration: none;
+                    width: 75%;
+                    text-align: center;
+                    @include fz(22);
+                    line-height: 28px;
+                    font-weight: 700;
+                    color: $color_black;
+                }
+
+                .image_link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 25%;
+                    height: 125%;
+                    border-left: 1px solid #9d9d9d;
+                }
             }
 
-            img {
-                width: 55px;
-                height: 55px;
-                position: relative;
-                top: 25px;
-                right: 25px;
+            li:hover {
+                transform: scale(1.05);
             }
         }
 
-        li:hover {
-            transform: scale(1.05);
-        }
-    }
+        .block_image {
+            width: 54%;
 
-    .block_image {
-        position: relative;
-        width: 600px;
-        z-index: 0;
-
-        h2 {
-            position: absolute;
-            top: 200px;
-            @include h2($color_white);
-            font-weight: 700;
-            font-size: 90px;
-            margin-left: -70px;
-            z-index: 0;
+            h2 {
+                @include h2($color_white);
+                letter-spacing: 3px;
+            }
         }
     }
 }
 
 .section_gallery {
     background-color: $color_yellow;
-    padding: 10vh 0;
+    padding: 100px 0;
     text-align: center;
 
     h2 {
@@ -313,7 +313,6 @@ header {
     .btn_orange {
         @include btn ($color_darkblue);
         margin-top: 50px;
-        cursor: pointer;
 
         &:hover {
             background-color: darken($color_darkblue, 20);
@@ -323,7 +322,7 @@ header {
 
 
 .section_subscribe {
-    padding: 10vh 0;
+    padding: 150px 0;
     background: url(../images/background_sub.png) center center no-repeat;
 }
 
@@ -376,7 +375,6 @@ header {
     .btn_green {
         @include btn($color_lightgreen);
         width: 170px;
-        cursor: pointer;
 
         &:hover {
             background-color: darken($color_lightgreen, 20);
@@ -498,7 +496,6 @@ header {
 .btn_red {
     @include btn($color_red);
     margin-bottom: 100px;
-    cursor: pointer;
 
     &:hover {
         background-color: darken($color_red, 20);
@@ -547,10 +544,8 @@ header {
 
 .form {
     background-color: transparentize($color_turquoise, 0.6);
-    /*делаем прозрачность и цвет для поля ввода*/
     border: none;
     outline: none;
-    /*убирает черную рамку при клике на поле ввода*/
     width: 500px;
     height: 50px;
     color: $color_white;
@@ -602,7 +597,6 @@ header {
 .btn_blue {
     @include btn($color_darkblue);
     margin-bottom: 50px;
-    cursor: pointer;
 
     &:hover {
         background-color: darken($color_darkblue, 20);
