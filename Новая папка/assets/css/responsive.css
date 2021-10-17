@@ -1,0 +1,31 @@
+@media screen and (max-width: 1200px) {
+  .blog_section {
+    /*padding: 40px 0;*/
+  }
+  .blog_section .container .flex_blog .articles {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .blog_section .container .flex_blog .articles .block_blog {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .fresh_section .content_fresh {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #header_menu {
+    display: none;
+  }
+
+  #hamburger_menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 700px) {
+  .fresh_section .content_fresh {
+    width: 80%;
+  }
+}

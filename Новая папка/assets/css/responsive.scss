@@ -1,0 +1,101 @@
+@mixin btn ($background-color) {
+    background-color: $background-color;
+    width: 200px;
+    height: 55px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    box-shadow: 0px 1px 4px #1d1d1d;
+    cursor: pointer;
+}
+
+@mixin h2($color) {
+    color: $color;
+    @include fz(90);
+    text-align: center;    
+    font-weight: 700;
+}
+
+@mixin p ($color) {
+    color: $color;
+    font-weight: 200;
+    @include fz(16);
+    line-height: 25px;
+}
+
+@mixin fz($size_px) {
+    font-size: ($size_px/$base_size)+rem;
+}
+
+$color_white:#fff;
+$color_black: #000;
+$color_red: #f72b3b;
+$color_violet: #b07cf7;
+$color_turquoise: #00b1b1;
+$color_orange: #ff6033;
+$color_lightblue: #70bfff;
+$color_yellow: #ffe92f;
+$color_darkblue: #5585a2;
+$color_lightgreen: #96b92c; 
+$base_size:16;
+
+@media screen and (max-width:1200px){
+    .blog_section {
+        /*padding: 40px 0;*/
+        .container {
+            .flex_blog {
+                .articles {
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                        .block_blog {
+                            margin-bottom: 30px;
+                        }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1150px){
+    .fresh_section {
+        .content_fresh {
+            width: 50%;
+            h1 {
+                
+            }
+            p {
+
+            }
+        }
+    }      
+}
+
+
+
+
+@media screen and (max-width:800px){
+    #header_menu {
+        display: none;
+    }
+    #hamburger_menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width:700px){
+    .fresh_section {
+        .content_fresh {
+            width: 80%;
+            h1 {
+                
+            }
+            p {
+
+            }
+        }
+    }     
+}

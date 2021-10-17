@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta content="width=1180" name="viewport" id="viewport">-->
     <title>Cahee</title>
     <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.css">
     <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.theme.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/responsive.min.css">
 </head>
 
@@ -32,7 +32,7 @@
             </nav>
             <div id="hamburger_menu">
                 <a href="#">
-<svg width="18px" height="18px" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<svg width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <path fill="#494c4e" d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
   </svg>
                 </a>
@@ -41,6 +41,7 @@
     </header>
 
     <main>
+
 
         <div class="fresh_section">
             <div class="container">
@@ -53,6 +54,8 @@
                 </div>
             </div>
         </div>
+
+
 
         <div class="about_section">
             <div class="container">
@@ -77,7 +80,6 @@
             </div>
         </div>
 
-                    
         <div class="section_services">
             <div class="container">
                 <div class="block_servises">
@@ -111,45 +113,37 @@
                         <h2>Our Services</h2>
                     </div>
                 </div>
+                
             </div>
         </div>
-                
+<!--
         <div class="section_gallery">
             <div class="container">
                 <div class="gallery_text">
                     <h2>Gallery</h2>
-                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
                 </div>
+
                 <div class="gallery_pic">
-                    <div class="main_two_pic">
-                        <div class="main_pic">
-                            <img src="assets/images/Plate-knife.png" alt="">
-                        </div>
-                        <div class="two_pic">
-                            <div class="two_pic_item">
-                                <img src="assets/images/Blueberry.png" alt="">
-                            </div>
-                            <div class="two_pic_item">
-                                <img src="assets/images/raspberries_dark.png" alt="">
-                            </div>
-                        </div>
-                    </div>    
-                    
-                    <div class="middle_pic">
-                        <div class="middle_pic_one">
-                            <img src="assets/images/cup_with_something.png" alt="">
-                        </div>
-                        <div class="middle_pic_one">
-                            <img src="assets/images/Fruit.png" alt="">
+                    <div class="big_small">
+                        <img class="main" src="assets/images/Plate-knife.png" alt="">
+                        <div class="two_pictures">
+                            <img class="main" src="assets/images/Blueberry.png" alt="">
+                            <img class="main" src="assets/images/raspberries_dark.png" alt="">
                         </div>
                     </div>
-                    
+                    <div class="two_middle">
+                        <img class="main" src="assets/images/cup_with_something.png" alt="">
+                        <img class="main" src="assets/images/Fruit.png" alt="">
+                    </div>
+
                 </div>
                 <button class="btn_orange" type="button">View more</button>
             </div>
-        </div>
-      
-                   
+        </div>-->
+
         <div class="section_subscribe">
             <div class="container">
                 <div class="subscribe_text">
@@ -163,16 +157,15 @@
                     <form class="subscribe_form" action="">
                         <input class="field_form_subscribe" type="text" placeholder="Your email address...">
                     </form>
-                    
+
                     <div class="btn_subscribe">
                         <button type="button" class="btn_green">Subscribe</button>
                     </div>
                 </div>
-
             </div>
-        </div>   
+        </div>
 
-
+        
         <div class="blog_section">
             <div class="container">
                 <div class="flex_blog">
@@ -190,6 +183,7 @@
                                     alt="Smoothies"></a>
                             <div class="date_block_blog">
                                 <p id="p_date_block_blog"><span class="number_date_block_blog">20</span><br>nov</p>
+
                             </div>
                             <div class="text_img_section_blog">
                                 <h4 class="h4_text_img_section_blog">Green Smoothies: Too Much of a Good Thing?</h4>
@@ -224,6 +218,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="contact_section">
             <div class="container">
@@ -271,18 +266,53 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="section_gallery">
+            <div class="container">
+                <div class="gallery_text">
+                    <h2>Gallery</h2>
+                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                </div>
+                <div class="gallery_pic">
+                    <div class="big_small">
+                        <div class="pic_big"><img class="pic" src="assets/images/Plate-knife.png" alt="">
+                        </div>
+                        <div class="two_small_pic">
+                            <div><img class="pic" src="assets/images/blueberry`s_plate.png" alt=""></div>
+                            <div><img class="pic" src="assets/images/mulberry.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="two_middle_pic">
+                        <div class="middle_pic"><img class="pic" src="assets/images/cup_with_something.png" alt="">
+                        </div>
+                        <div class="middle_pic"><img class="pic" src="assets/images/persimmon.png" alt=""></div>
+                    </div>
+                </div>
+                <div><button class="btn_blue_gallery" type="button">View more</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </main>
 
     <footer>
         <div class="container">
-            <p>  &#169; 2015 Company. All right reserved</p>
+            <p> &#169; 2015 Company. All right reserved</p>
             <div id="logo_footer">
-                <a href="#"><img src="assets/images/Logo_white.png" alt="logo"></a>
+                <a href="#"><img src="assets/images/logo_footer.png" alt="logo"></a>
             </div>
             <p>Made with <span>love</span> by Auskteez</p>
         </div>
     </footer>
-
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/plugins/styler/jquery.formstyler.min.js"></script>
@@ -295,8 +325,10 @@
                     $("header").removeClass("scrolled");
                 }
             });
+            $('input, select').styler();
         });
     </script>
+
 </body>
 
 </html>
