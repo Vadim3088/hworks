@@ -24,7 +24,7 @@ img {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1170px;
   width: 90%;
   margin: 0 auto;
 }
@@ -102,7 +102,7 @@ header.scrolled {
 
 .fresh_section {
   background: url("../images/background_fresh.png") center center/cover no-repeat;
-  height: 100vh;
+  height: 103vh;
   display: flex;
   align-items: center;
 }
@@ -119,8 +119,7 @@ header.scrolled {
   line-height: 30px;
   font-size: 1.125rem;
 }
-
-.btn_orange {
+.fresh_section .content_fresh .btn_orange {
   background-color: #ff6033;
   width: 200px;
   height: 55px;
@@ -135,30 +134,40 @@ header.scrolled {
   cursor: pointer;
   margin-top: 18px;
 }
-.btn_orange:hover {
+.fresh_section .content_fresh .btn_orange:hover {
   background-color: #cc2d00;
+}
+.fresh_section .fresh_mouse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.fresh_section .fresh_mouse img {
+  height: 40px;
+  width: 24px;
+  position: relative;
+  top: 160px;
 }
 
 .about_section {
   background-color: #00b1b1;
 }
-.about_section .flex_about {
+.about_section .bloks_about {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.about_section .flex_about .bloks_about {
-  width: 38%;
+.about_section .bloks_about .text_about {
+  width: 40%;
 }
-.about_section .flex_about .bloks_about h2 {
+.about_section .bloks_about .text_about h2 {
   color: #fff;
   font-size: 5.625rem;
   text-align: center;
   font-weight: 700;
   text-align: left;
-  line-height: 120px;
 }
-.about_section .flex_about .bloks_about p {
+.about_section .bloks_about .text_about p {
   color: #fff;
   font-weight: 200;
   font-size: 1rem;
@@ -189,7 +198,6 @@ header.scrolled {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
   box-shadow: 0 0 5px black;
   height: calc(25% - 20px);
 }
@@ -207,7 +215,7 @@ header.scrolled {
   justify-content: center;
   align-items: center;
   width: 25%;
-  height: 130%;
+  height: 100%;
   border-left: 1px solid #9d9d9d;
   cursor: pointer;
 }

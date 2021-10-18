@@ -1,3 +1,5 @@
+
+
 @mixin btn ($background-color) {
     background-color: $background-color;
     width: 200px;
@@ -15,15 +17,15 @@
 
 @mixin h2($color) {
     color: $color;
-    @include fz(90);
-    text-align: center;
+    font-size: 5.625rem;
+    text-align: center;    
     font-weight: 700;
 }
 
 @mixin p ($color) {
     color: $color;
     font-weight: 200;
-    @include fz(16);
+    font-size: 1rem;;
     line-height: 25px;
 }
 
@@ -69,7 +71,7 @@ img {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1170px;
     width: 90%;
     margin: 0 auto;
 }
@@ -158,13 +160,13 @@ header {
 
 .fresh_section {
     background: url('../images/background_fresh.png') center center/cover no-repeat;
-    height: 100vh;
+    height: 103vh;
     display: flex;
     align-items: center;
 
     .content_fresh {
         width: 30%;
-
+                
         h1 {
             color: $color_black;
             @include fz(62);
@@ -176,42 +178,52 @@ header {
             line-height: 30px;
             @include fz(18)
         }
+        .btn_orange {
+            @include btn($color_orange);
+            margin-top: 18px;
+        
+            &:hover {
+                background-color: darken($color_orange, 20);
+            }
+        }
     }
-}
+    .fresh_mouse {
+        display: flex;
+        justify-content: center;
+        width: 100%;
 
-.btn_orange {
-    @include btn($color_orange);
-    margin-top: 18px;
-
-    &:hover {
-        background-color: darken($color_orange, 20);
+        img {
+            height: 40px;
+            width: 24px;
+            position: relative;
+            top: 160px;
+        }
     }
+    
 }
 
 
 .about_section {
-    background-color: $color_turquoise;
-
-    .flex_about {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
+    background-color: $color_turquoise;        
         .bloks_about {
-            width: 38%;
-
-            h2 {
-                @include h2($color_white);
-                text-align: left;
-                line-height: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .img_about {
+                //position: relative;
             }
-
-            p {
-                @include p($color_white);
-                line-height: 30px;
+            .text_about {
+                width: 40%;
+                h2 {
+                    @include h2($color_white);
+                    text-align: left;                     
+                    }
+                p {
+                    @include p($color_white);
+                    line-height: 30px;            
+                }
             }
-        }
-    }
+        }       
 }
 
 
@@ -239,7 +251,6 @@ header {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                padding: 10px 0;
                 box-shadow: 0 0 5px rgb(0, 0, 0);
                 height: calc(25% - 20px);
 
@@ -258,7 +269,7 @@ header {
                     justify-content: center;
                     align-items: center;
                     width: 25%;
-                    height: 130%;
+                    height: 100%;
                     border-left: 1px solid #9d9d9d;
                     cursor: pointer;
                     img {

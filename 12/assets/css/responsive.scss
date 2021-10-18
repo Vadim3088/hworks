@@ -73,10 +73,17 @@ $base_size:16;
         }
     }
     .about_section {
-        .container {
-            .flex_about {
-                .bloks_about {
-                    width: 42%;
+        .bloks_about {
+            .img_about {
+
+            }
+            .text_about {
+                width: 60%;
+                h2 {
+                    @include fz(70);
+                }
+                p {
+                    
                 }
             }
         }
@@ -212,6 +219,48 @@ $base_size:16;
     }
 }
 
+@media screen and (max-width:900px) {
+    .about_section {
+        .bloks_about {
+            .img_about {
+
+            }
+            .text_about {
+                width: 85%;
+                h2 {
+                    @include fz(60);
+                }
+                p {
+                    line-height: 20px; 
+                }
+            }
+        }
+    }
+    .blog_section {
+        /*padding: 40px 0;*/
+        .container {
+            .flex_blog {
+                .h2_blog {
+                    @include fz(60);
+                    
+                }
+                .p_blog {
+                    width: 80%;
+                }
+                .articles {
+                    
+                    
+                        .block_blog {
+                            margin-bottom: 15px;
+                        }
+                }
+                .btn_red {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width:800px){
     #header_menu {
@@ -245,7 +294,7 @@ $base_size:16;
                 li {
                     a {
                         .image_link {
-                            height: 150%;
+                            
                         }
                     }
                 }                
@@ -310,17 +359,20 @@ $base_size:16;
         }
     }
     .about_section {
-        .container {
-            .flex_about {
-                .bloks_about {
-                    width: 49%;
-                    h2 {
-                        line-height: 82px;
-                        @include fz(76);
-                    }
-                    p {
-                        line-height: 20px;
-                    }
+        .bloks_about {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            .img_about {
+                width: 70%;
+            }
+            .text_about {
+                width: 100%;                
+                h2 {
+                    @include fz(50);
+                    text-align: center;
+                }
+                p {
+                    line-height: 20px; 
                 }
             }
         }
@@ -336,7 +388,7 @@ $base_size:16;
                         @include fz(16);
 
                         .image_link {
-                            height: 150%;
+                            
                         }
                     }
                 }                
@@ -371,12 +423,12 @@ $base_size:16;
         .block_servises {
             padding: 10% 0 10% 3%;
             .block_link {
-                height: 360px;
+                
                 width: 42%;
                 li {
                     a {
                         .image_link {
-                            height: 150%;
+                            
                         }
                     }
                 }                
@@ -421,6 +473,41 @@ $base_size:16;
                     }
                }
            } 
+        }
+    }
+    .blog_section {
+        .container {
+            .flex_blog {
+                .h2_blog {
+                    @include fz(42);
+                    
+                }
+                .p_blog {
+                    width: 100%;
+                    line-height: 20px;
+                }
+                .articles { 
+                    .block_blog {
+                        margin-bottom: 15px;
+                        width: 270px;
+                        height: 210px;
+                        .img_section_blog {
+                        width: 270px;
+                        height: 210px;
+                        
+                        }
+                        &:hover .date_block_blog {
+                            left: 15px;
+                            top: 15px;
+                        }
+                        
+
+                    }
+                }
+                .btn_red {
+                    margin-bottom: 30px;
+                }
+            }
         }
     }
 }    
