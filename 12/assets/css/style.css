@@ -230,58 +230,73 @@ header.scrolled {
 
 .section_gallery {
   background-color: #ffe92f;
-  padding: 100px 0;
-  text-align: center;
+  padding: 7vh 0;
 }
-.section_gallery h2 {
+.section_gallery .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery_text {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.gallery_text h2 {
   color: #000;
   font-size: 5.625rem;
   text-align: center;
   font-weight: 700;
+  margin-bottom: 20px;
 }
-.section_gallery p {
-  width: 60%;
+.gallery_text p {
+  color: #000;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 25px;
+  width: 50%;
   margin: 0 auto;
-  padding: 30px 0;
-  font-size: 1.0625rem;
 }
-.section_gallery .gallery_pic {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.section_gallery .gallery_pic .main_two_pic {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.gallery_pic {
+  margin-bottom: 40px;
   width: 100%;
   height: 100%;
-}
-.section_gallery .gallery_pic .main_two_pic .main_pic {
-  height: 100%;
-  flex-basis: 68%;
-}
-.section_gallery .gallery_pic .main_two_pic .two_pic {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  flex-basis: 32%;
-  height: 110%;
 }
-.section_gallery .gallery_pic .main_two_pic .two_pic .two_pic_item {
-  width: 100%;
-  height: 100%;
-}
-.section_gallery .gallery_pic .middle_pic {
+.gallery_pic .big_small {
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  margin-bottom: 30px;
+}
+.gallery_pic .big_small .pic_big {
+  width: 65%;
+  height: 100%;
+}
+.gallery_pic .big_small .two_small_pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(35% - 30px);
+}
+.gallery_pic .two_middle_pic {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery_pic .two_middle_pic .middle_pic {
+  width: calc(50% - 15px);
+}
+
+.pic {
   width: 100%;
+  vertical-align: top;
+  box-shadow: 0 0 4px #313131;
 }
-.section_gallery .gallery_pic .middle_pic .middle_pic_one {
-  width: calc(50% - 10px);
-}
-.section_gallery .btn_orange {
+
+.btn_blue_gallery {
   background-color: #5585a2;
   width: 200px;
   height: 55px;
@@ -294,9 +309,8 @@ header.scrolled {
   font-weight: 200;
   box-shadow: 0px 1px 4px #1d1d1d;
   cursor: pointer;
-  margin-top: 50px;
 }
-.section_gallery .btn_orange:hover {
+.btn_blue_gallery:hover {
   background-color: #324e5f;
 }
 
@@ -334,13 +348,9 @@ header.scrolled {
   width: 100%;
 }
 
-.subscribe_form {
-  border: 1px solid black;
-  width: 50%;
-}
 .subscribe_form .field_form_subscribe {
   outline: none;
-  width: 96%;
+  width: 575px;
   height: 55px;
   border: none;
   padding-left: 20px;
@@ -349,6 +359,7 @@ header.scrolled {
   font-size: 1rem;
   line-height: 25px;
   font-family: "Raleway", sans-serif;
+  border: 1px solid black;
   font-size: 0.9375rem;
 }
 .subscribe_form .field_form_subscribe::placeholder {
