@@ -15,6 +15,38 @@
 
 <body>
 
+    <div id="mobile_menu_wrap">
+        <div id="sidemenu_top">
+
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="mobile_logo">
+                <a href="#">
+                    <img src="assets/images/Logo.png" alt="">
+                </a>
+            </div>
+        </div>
+        <nav class="sidemenu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_overlay"></div>
+
     <header>
         <div class="container">
             <div id="logo">
@@ -31,12 +63,11 @@
                 </ul>
             </nav>
             <div id="hamburger_menu">
-                <a href="#">
-                    <svg width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#494c4e"
-                            d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z" />
-                    </svg>
-                </a>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
             </div>
         </div>
     </header>
@@ -292,6 +323,16 @@
                 } else {
                     $("header").removeClass("scrolled");
                 }
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $(".hamburger, #page_overlay").on('click', function(){
+                $("#mobile_menu_wrap .hamburger").toggleClass("is-active");
+                $("body").toggleClass("open");
             });
         });
     </script>
