@@ -166,11 +166,17 @@
     height: 360px;
     width: 42%;
   }
+  .section_services .block_servises .block_link li a {
+    font-size: 1.125rem;
+  }
+  .section_services .block_servises .block_link li .image_link {
+    width: 20%;
+  }
   .section_services .block_servises .block_image {
     width: 50%;
   }
   .section_services .block_servises .block_image h2 {
-    font-size: 4.6875rem;
+    font-size: 4.0625rem;
     letter-spacing: 0;
   }
 
@@ -254,7 +260,11 @@
     padding: 10% 0 10% 3%;
   }
   .section_services .block_servises .block_link {
+    height: 360px;
     width: 42%;
+  }
+  .section_services .block_servises .block_link li .image_link {
+    width: 20%;
   }
   .section_services .block_servises .block_image {
     width: 50%;

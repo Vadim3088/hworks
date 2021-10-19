@@ -293,16 +293,18 @@ $base_size:16;
                 width: 42%;
                 li {
                     a {
-                        .image_link {
-                            
-                        }
+                        @include fz(18);
+                    }
+                    .image_link {
+                        width: 20%;
+                        
                     }
                 }                
             }
             .block_image {
                 width: 50%;
                 h2 {
-                    @include fz(75);
+                    @include fz(65);
                     letter-spacing: 0;
                 }
             }
@@ -423,13 +425,14 @@ $base_size:16;
         .block_servises {
             padding: 10% 0 10% 3%;
             .block_link {
-                
+                height: 360px;
                 width: 42%;
                 li {
                     a {
-                        .image_link {
-                            
-                        }
+                    }
+                    .image_link {
+                        width: 20%;
+                       
                     }
                 }                
             }
@@ -441,7 +444,7 @@ $base_size:16;
                 }
             }
         }
-    }    
+    }
     .contact_section {
         .container {
             .name_contact_section {

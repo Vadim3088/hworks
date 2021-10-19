@@ -1,4 +1,4 @@
-
+@import "hamburger";
 
 @mixin btn ($background-color) {
     background-color: $background-color;
@@ -256,7 +256,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    width: 65%;
+                    width: 75%;
                     text-align: center;
                     @include fz(22);
                     line-height: 28px;
