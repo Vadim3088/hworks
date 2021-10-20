@@ -26,7 +26,6 @@
     color: $color;
     font-weight: 200;
     font-size: 1rem;
-    ;
     line-height: 25px;
 }
 
@@ -263,13 +262,14 @@ header {
 
 .fresh_section {
     background: url('../images/background_fresh.png') center center/cover no-repeat;
-    height: 103vh;
+    height: 100vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
-
+    
     .content_fresh {
         width: 30%;
-
+          
         h1 {
             color: $color_black;
             @include fz(62);
@@ -278,33 +278,40 @@ header {
         }
 
         p {
-            line-height: 30px;
-            @include fz(18)
+            @include p($color_black);
+            font-weight: 400;
         }
-
         .btn_orange {
             @include btn($color_orange);
             margin-top: 18px;
-
+            
+        
             &:hover {
                 background-color: darken($color_orange, 20);
             }
         }
     }
-
     .fresh_mouse {
         display: flex;
         justify-content: center;
+        
         width: 100%;
 
         img {
             height: 40px;
             width: 24px;
-            position: relative;
-            top: 160px;
+            position: absolute;
+            bottom: 40px;
         }
     }
+}
 
+.btn_orange {    
+    @include btn($color_orange);      
+    margin-top: 18px;
+    &:hover {
+    background-color: darken($color_orange, 20);
+    }
 }
 
 
@@ -407,87 +414,67 @@ header {
 
 .section_gallery {
     background-color: $color_yellow;
-    padding: 7vh 0;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.gallery_text {
     text-align: center;
-    margin-bottom: 45px;
-
-    h2 {
-        @include h2($color_black);
-        margin-bottom: 20px;
-    }
-
-    p {
-        @include p($color_black);
-        width: 50%;
-        margin: 0 auto;
-    }
-}
-
-
-.gallery_pic {
-    margin-bottom: 40px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .big_small {
-        display: flex;
-        justify-content: space-between;
+    padding: 7vh 0;
+    
+    img {
+        width: 100%;
         height: 100%;
-        margin-bottom: 30px;
+        object-fit: cover;
+        box-shadow: 0 0 5px rgb(49, 49, 49);
+    }
 
-        .pic_big {
-            width: 65%;
-            height: 100%;
-
+    .gallery_text {
+        text-align: center;
+        margin-bottom: 45px;
+        h2 {
+            @include h2($color_black);
+            margin-bottom: 20px;
         }
+        p {
+            @include p($color_black);
+            font-weight: 400;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
 
-        .two_small_pic {
+    .gallery_pic {
+        margin-bottom: 40px;
+        .big_small {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            width: calc(35% - 30px);
+            align-items: stretch;
+            margin-bottom: 30px;
+            .pic_big {
+                width: calc(66.6666% - 15px);
+            }
+            .two_small_pic {
+                width: calc(33.3333% - 15px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pic {
+                    height: calc(50% - 15px);
+                }
 
-
-            .pic {}
+            }
+        }
+        .two_middle_pic {
+            display: flex;
+            justify-content: space-between;
+            .pic {
+                width: calc(50% - 15px);
+            }
+        }
+    }    
+    .btn_blue_gallery {
+        @include btn ($color_darkblue);    
+        &:hover {
+            background-color: darken($color_darkblue, 20);
         }
     }
-
-    .two_middle_pic {
-        display: flex;
-        justify-content: space-between;
-
-        .middle_pic {
-            width: calc(50% - 15px);
-        }
-    }
 }
-
-.pic {
-    width: 100%;
-    vertical-align: top;
-    box-shadow: 0 0 4px rgb(49, 49, 49);
-}
-
-.btn_blue_gallery {
-    @include btn ($color_darkblue);
-
-    &:hover {
-        background-color: darken($color_darkblue, 20);
-    }
-}
-
 
 .section_subscribe {
     padding: 150px 0;
