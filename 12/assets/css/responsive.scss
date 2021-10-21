@@ -61,7 +61,6 @@ $base_size:16;
     .about_section {
         .bloks_about {
             .img_about {
-
             }
             .text_about {
                 width: 60%;
@@ -223,7 +222,7 @@ $base_size:16;
                             width: 370px;
                         }
                     }
-               }
+                }
            } 
         }
     }
@@ -257,19 +256,15 @@ $base_size:16;
     }
 
     .blog_section {
-        
         .container {
             .flex_blog {
                 .h2_blog {
-                    
                     
                 }
                 .p_blog {
                     width: 80%;
                 }
                 .articles {
-                    
-                    
                         .block_blog {
                             margin-bottom: 15px;
                         }
@@ -290,7 +285,6 @@ $base_size:16;
                width: 20%;
             }
         }
-        
     }
     #header_menu {
         display: none;
@@ -370,19 +364,31 @@ $base_size:16;
                 }
             }
             .gallery_pic {
-                margin-bottom: 30px;
+                
                 .big_small {
                     margin-bottom: 16px;
                     .pic_big {
-                        width: 65%;
+                        width: calc(66.6666% - 8px);
+                        &:hover {
+                            transform: scale(1.2)
+                        }
                     }
                     .two_small_pic {
-                        width: calc(35% - 16px);
+                        width: calc(33.3333% - 8px);
+                        .pic {
+                            height: calc(50% - 8px);
+                            &:hover {
+                                transform: scale(1.2)
+                            }
+                        }
                     }
                 }
                 .two_middle_pic {
-                    .middle_pic {
+                    .pic {
                         width: calc(50% - 8px);
+                        &:hover {
+                            transform: scale(1.2)
+                        }
                     }
                 }
             }
@@ -445,8 +451,6 @@ $base_size:16;
                             left: 15px;
                             top: 15px;
                         }
-                        
-
                     }
                 }
                 .btn_red {
@@ -491,8 +495,8 @@ $base_size:16;
                         height: 40px;
                         font-size:15px;
                     }
-               }
-           } 
+                }
+            } 
         }
     } 
 }
@@ -583,8 +587,6 @@ $base_size:16;
                             left: 35px;
                             top: 35px;
                         }
-                        
-
                     }
                 }
                 .btn_red {
@@ -622,14 +624,12 @@ $base_size:16;
                
             }
         }
-        
     }
     .fresh_section {
        
         .container {
             width: 100%;
             margin-top: 50px;
-            
         }
         .content_fresh {
             width: 100%;
@@ -639,13 +639,10 @@ $base_size:16;
             text-align: center;
             background: linear-gradient(transparent, rgba(255, 255, 255, 0.8), transparent);
             h1 {
-                @include fz(52);
-                
+                @include fz(52);    
             }
             p {
-                width: 90%;
-               
-                
+                width: 90%;    
             }
             .btn_orange {
                 width: 150px;
@@ -656,7 +653,6 @@ $base_size:16;
         .fresh_mouse {
             
             .img {
-            
             
             }
         }
@@ -699,33 +695,35 @@ $base_size:16;
                 }
             }
             .gallery_pic {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
                 .big_small {
-                    margin-bottom: 8px;
+                    display: block;
+                    margin-bottom: 0;
                     .pic_big {
-                        .pic {
-                            &:hover {
-                                transform: scale(1.2)
-                            }
-                        }
+                        width: 100%;
+                        margin-bottom: 20px;
+                       
                     }
                     .two_small_pic {
-                        width: calc(35% - 8px);
+                    display: block; 
+                    width: 100%;  
                         .pic {
-                            &:hover {
-                                transform: scale(1.2)
-                            }
+                            width: 100%;
+                            height: 100%;
+                            margin-bottom: 20px;
                         }
                     }
                 }
                 .two_middle_pic {
-                    .middle_pic {
-                        width: calc(50% - 4px);
-                        .pic {
-                            &:hover {
-                                transform: scale(1.2)
-                            }
-                        }
+                    display: block;
+                
+                    .pic {
+                        width: 100%;
+                        margin-bottom: 20px;
                     }
+                    
                 }
             }
             .btn_blue_gallery {
@@ -782,8 +780,6 @@ $base_size:16;
                         }
                         &:hover .date_block_blog {
                         }
-                        
-
                     }
                 }
                 .btn_red {
@@ -805,6 +801,7 @@ $base_size:16;
             }
            .blocks_contact {
                flex-direction: column-reverse;
+               align-items: center;
 
                .contact_block_right {
                    width: 100%;
@@ -812,16 +809,19 @@ $base_size:16;
                    flex-direction: column;
                    justify-content: space-between;
                    .our_contacts {
-                    width: 100%;
-                    h5 {
-                        @include fz(16);
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h5 {
+                            @include fz(16);
+                        }
+                        a {
+                            @include fz(18);
+                        }
                     }
-                    a {
-                        @include fz(18);
-                    }
-                   }
 
-               }
+                }
                .contact_block_left {
                     .contact_form {
                         .form {
@@ -891,8 +891,6 @@ $base_size:16;
                             left: 15px;
                             top: 15px;
                         }
-                        
-
                     }
                 }
                 .btn_red {
